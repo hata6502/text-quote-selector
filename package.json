@@ -1,0 +1,30 @@
+{
+  "name": "text-quote-selector",
+  "version": "1.0.0",
+  "description": "Implementation of Web Annotation Text Quote Selector. ",
+  "main": "dist/textQuoteSelector.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hata6502/text-quote-selector.git"
+  },
+  "keywords": [
+    "WebAnnotation",
+    "TextQuoteSelector"
+  ],
+  "author": "Tomoyuki Hata",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/hata6502/text-quote-selector/issues"
+  },
+  "homepage": "https://github.com/hata6502/text-quote-selector#readme",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "leven": "^4.0.0"
+  }
+}
