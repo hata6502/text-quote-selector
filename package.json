@@ -2,7 +2,7 @@
   "name": "text-quote-selector",
   "version": "1.0.0",
   "description": "Implementation of Web Annotation Text Quote Selector. ",
-  "main": "dist/textQuoteSelector.mjs",
+  "main": "dist/index.mjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hata6502/text-quote-selector.git"

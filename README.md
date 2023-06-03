@@ -4,4 +4,4 @@ Implementation of [Web Annotation Text Quote Selector](https://www.w3.org/TR/ann
 
 ## Usage
 
-See [textQuoteSelector.d.mts](https://github.com/hata6502/text-quote-selector/blob/main/dist/textQuoteSelector.d.mts).
+See [index.d.mts](https://github.com/hata6502/text-quote-selector/blob/main/dist/index.d.mts).
