@@ -125,7 +125,7 @@ export const quoteText = (
 
 export const textQuoteSelectorAll = (
   textIndex: TextIndex,
-  { exact, prefix = "", suffix = "" }: TextQuoteSelector
+  { exact, prefix, suffix }: TextQuoteSelector
 ) => {
   const exactMatchIndexes = [];
   let exactMatchIndex = -1;
@@ -138,21 +138,27 @@ export const textQuoteSelectorAll = (
 
   const matches = exactMatchIndexes.map((exactMatchIndex) => {
     const exactMatchEndIndex = exactMatchIndex + exact.length;
-    const distance =
-      leven(
-        textIndex.text.slice(
-          Math.max(exactMatchIndex - contextLength, 0),
-          exactMatchIndex
-        ),
-        prefix
-      ) +
-      leven(
-        textIndex.text.slice(
-          exactMatchEndIndex,
-          exactMatchEndIndex + contextLength
-        ),
-        suffix
-      );
+    const prefixDistance =
+      typeof prefix === "string"
+        ? leven(
+            textIndex.text.slice(
+              Math.max(exactMatchIndex - contextLength, 0),
+              exactMatchIndex
+            ),
+            prefix
+          )
+        : 0;
+    const suffixDistance =
+      typeof suffix === "string"
+        ? leven(
+            textIndex.text.slice(
+              exactMatchEndIndex,
+              exactMatchEndIndex + contextLength
+            ),
+            suffix
+          )
+        : 0;
+    const distance = prefixDistance + suffixDistance;
 
     return [exactMatchIndex, distance] as const;
   });
