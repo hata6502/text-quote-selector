@@ -37,7 +37,7 @@ export const getTextIndex = (root: Node): TextIndex => {
     }
 
     index.push([text.length, node]);
-    text += node.textContent?.trim() ?? "";
+    text += node.textContent ?? "";
   }
 
   return { text, index };

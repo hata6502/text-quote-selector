@@ -10,7 +10,7 @@ export const getTextIndex = (root) => {
             throw new Error("node is not Text");
         }
         index.push([text.length, node]);
-        text += node.textContent?.trim() ?? "";
+        text += node.textContent ?? "";
     }
     return { text, index };
 };
