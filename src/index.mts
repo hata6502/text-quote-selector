@@ -95,7 +95,7 @@ export const getTextRange = (range: Range): TextRange => {
       throw new Error("endContainer not found");
     }
 
-    endOffset = endContainer.textContent?.length ?? 0;
+    endOffset = (endContainer.textContent ?? "").length;
   }
 
   return {

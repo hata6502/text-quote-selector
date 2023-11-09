@@ -56,7 +56,7 @@ export const getTextRange = (range) => {
         if (!endContainer) {
             throw new Error("endContainer not found");
         }
-        endOffset = endContainer.textContent?.length ?? 0;
+        endOffset = (endContainer.textContent ?? "").length;
     }
     return {
         start: { textNode: startContainer, offset: startOffset },
