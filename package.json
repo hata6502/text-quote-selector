@@ -1,6 +1,6 @@
 {
   "name": "text-quote-selector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Implementation of Web Annotation Text Quote Selector. ",
   "main": "dist/index.mjs",
   "repository": {

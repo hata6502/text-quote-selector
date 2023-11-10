@@ -233,4 +233,4 @@ const getRangePointNode = ({
   container instanceof Comment ||
   container instanceof CDATASection
     ? container
-    : [...container.childNodes].at(offset) ?? container;
+    : [...container.childNodes].at(offset) ?? container.nextSibling;
